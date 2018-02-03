@@ -1,0 +1,30 @@
+<div class="container">
+
+  <h1 class="text-center">To Do List</h1>
+
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">事項清單</h3>
+    </div>
+
+    <!-- Add new todo -->
+    <div class="panel-body">
+    <%= form_for @todo do |f| %>
+      <%= f.label "Add New To-Do" %>
+      <%= f.text_area :title, :class => "form-control" %>
+      <%= f.submit "Create" %>
+      <% end %>
+    </div>
+
+    <!-- Todo List -->
+    <table class="table table-hover">
+      <tbody id="todolist">
+        <% @todos.each do |todo| %>
+          <tr id="todo-<%= todo.id %>">
+            <%= render :partial => "todo", :locals => { :todo => todo } %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
