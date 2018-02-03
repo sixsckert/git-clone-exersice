@@ -1,16 +1,16 @@
 <td class="my-pointer">
-  <span class="glyphicon glyphicon-unchecked"></span>
+  <span class="my-font glyphicon glyphicon-unchecked"></span>
 </td>
 <td>
-  <p id="todo-title-<%= todo.id %>">
+  <p id="todo-title-<%= todo.id %>" class="title my-font">
     <%= todo.title %>
   </p>
 </td>
 <td class="my-operation">
   <%= link_to todos_path(id: todo.id) do %>
-    <span class="text-info glyphicon glyphicon-pencil"></span>
+    <span class="my-btn my-btn-transparent text-info glyphicon glyphicon-pencil"></span>
   <% end %>
   <%= link_to todo_path(todo), method: :delete do %>
-    <span class="text-danger glyphicon glyphicon-trash"></span>
+    <span class="my-btn my-btn-transparent text-danger glyphicon glyphicon-trash"></span>
   <% end %>
 </td>

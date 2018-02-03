@@ -1,0 +1,98 @@
+
+a:hover {
+  text-decoration: none;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+/* ===== 預設 ===== */
+
+.my-btn {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.my-btn-transparent {
+    background: transparent;
+}
+
+.my-pointer {
+    cursor: pointer;
+}
+
+.my-font {
+    font-size: 18px;
+}
+
+/* ===== 新增 ===== */
+.my-create .input-group-addon button {
+    width: 50px;
+    height: 44px;
+}
+
+textarea {
+  overflow: hidden;
+  resize: none;
+}
+
+
+/* ===== 表格 ===== */
+
+/* 第一欄 狀態 */
+
+.my-table td:first-child {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.my-pointer span {
+  width: 30px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+}
+
+/* 第二欄 */
+
+.title {
+  margin: 10px;
+}
+.my-style-done-true {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.my-status-edit-true {
+    display: none;
+}
+
+.my-update .input-group-addon button {
+    width: 35px;
+    height: 32px;
+}
+
+
+/* 第三欄 操作 */
+
+.my-table td:last-child {
+    width: 80px;
+    vertical-align: middle;
+}
+
+.my-operation span {
+    width: 30px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}

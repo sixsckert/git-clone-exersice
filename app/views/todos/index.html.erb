@@ -9,15 +9,19 @@
 
     <!-- Add new todo -->
     <div class="panel-body">
-    <%= form_for @todo do |f| %>
+    <%= form_for @todo, {class: "my-form"} do |f| %>
       <%= f.label "Add New To-Do" %>
-      <%= f.text_area :title, :class => "form-control" %>
-      <%= f.submit "Create" %>
+      <div class="input-group">
+        <%= f.text_area :title, :class => "form-control" %>
+        <div class="input-group-addon">
+          <%= f.submit "Create", :class => "my-btn my-btn-transparent" %>
+        </div>
+      </div>
       <% end %>
     </div>
 
     <!-- Todo List -->
-    <table class="table table-hover">
+    <table class="my-table table table-hover">
       <tbody id="todolist">
         <% @todos.each do |todo| %>
           <tr id="todo-<%= todo.id %>">
