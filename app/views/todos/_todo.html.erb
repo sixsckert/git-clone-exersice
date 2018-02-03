@@ -1,5 +1,11 @@
 <td class="my-pointer">
-  <span class="my-font glyphicon glyphicon-unchecked"></span>
+  <%= link_to toggle_check_todo_path(todo), id: "todo-check-#{todo.id}", method: :post do %>
+    <% if todo.done? %>
+      <span class="my-font glyphicon glyphicon-check"></span>
+    <% else %>
+      <span class="my-font glyphicon glyphicon-unchecked"></span>
+    <% end %>
+  <% end %>
 </td>
 <td>
   <p id="todo-title-<%= todo.id %>" class="title my-font">
