@@ -9,7 +9,7 @@
 
     <!-- Add new todo -->
     <div class="panel-body">
-    <%= form_for @todo, {class: "my-form"} do |f| %>
+    <%= form_for @todo, {class: "my-form", remote: true} do |f| %>
       <%= f.label "Add New To-Do" %>
       <div class="input-group">
         <%= f.text_area :title, :class => "form-control" %>
